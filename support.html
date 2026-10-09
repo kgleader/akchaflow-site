@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akcha Flow Support</title>
+<meta name="description" content="Help with Akcha Flow: purchases, imports, privacy and contact.">
+<meta property="og:title" content="Akcha Flow Support">
+<meta property="og:description" content="Help with Akcha Flow: purchases, imports, privacy and contact.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/icon-180.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="index.html"><img src="assets/icon-180.png" alt="" width="34" height="34"><span>Akcha Flow</span></a>
+  <nav class="menu">
+    <a href="support.html"><span lang="en">Support</span><span lang="ru">Поддержка</span></a>
+    <a href="privacy.html"><span lang="en">Privacy</span><span lang="ru">Конфиденциальность</span></a>
+    <span class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-l="en" aria-pressed="true">EN</button><button type="button" data-l="ru" aria-pressed="false">RU</button>
+    </span>
+  </nav>
+</header>
+<main>
+<article class="doc" lang="en">
+<h1>Akcha Flow — Support</h1>
+<p class="muted">Akcha Flow is a private personal-finance organizer for iPhone. Your data stays on your device.</p>
+<p><a href="mailto:kgleader@gmail.com">Email: kgleader@gmail.com</a></p>
+<h2>How do I contact you?</h2>
+<p>Email kgleader@gmail.com. Please tell me your iOS version and what you were doing. Please do not send statements or other financial documents.</p>
+<h2>Where is my data?</h2>
+<p>Only on your iPhone, inside the app. Nothing is uploaded. See the Privacy Policy.</p>
+<h2>What is free and what is Pro?</h2>
+<p>The app is free: manual entry, reports, budgets, recurring payments, backup, previews of imported statements and up to two accounts. A one-time purchase, Akcha Flow Pro, lets you save imported statements and add unlimited accounts. It is not a subscription.</p>
+<h2>How do I restore my purchase?</h2>
+<p>Open Settings → Akcha Flow Pro → Restore purchase, signed in with the same Apple ID you used to buy it.</p>
+<h2>Can my family use Pro?</h2>
+<p>Yes. Pro supports Family Sharing: with Family Sharing and “Share Purchases” turned on in your Apple account, family members get Pro without paying again.</p>
+<h2>Which statement files can I import?</h2>
+<p>PDF, CSV and OFX/QFX files that you choose yourself. The app does not connect to your bank.</p>
+<h2>How do I erase my data?</h2>
+<p>Settings → Backup &amp; Restore → “Delete all app data”. Deleting the app also removes its data.</p>
+<h2>Which languages does it support?</h2>
+<p>English and Russian.</p>
+<p><a href="privacy.html">Privacy Policy</a></p>
+</article>
+<article class="doc" lang="ru">
+<h1>Akcha Flow — Поддержка</h1>
+<p class="muted">Akcha Flow — личный органайзер финансов для iPhone. Ваши данные остаются на вашем устройстве.</p>
+<p><a href="mailto:kgleader@gmail.com">Написать: kgleader@gmail.com</a></p>
+<h2>Как с вами связаться?</h2>
+<p>Напишите на kgleader@gmail.com. Укажите версию iOS и что вы делали. Пожалуйста, не присылайте выписки и другие финансовые документы.</p>
+<h2>Где хранятся мои данные?</h2>
+<p>Только на вашем iPhone, внутри приложения. Ничего не загружается. Подробнее в Политике конфиденциальности.</p>
+<h2>Что бесплатно, а что в Pro?</h2>
+<p>Бесплатно: ручной ввод, отчёты, бюджеты, повторяющиеся платежи, резервные копии, предпросмотр импортируемых выписок и до двух счетов. Разовая покупка Akcha Flow Pro позволяет сохранять импортированные выписки и добавлять неограниченное число счетов. Это не подписка.</p>
+<h2>Как восстановить покупку?</h2>
+<p>Откройте Настройки → Akcha Flow Pro → «Восстановить покупку» под тем же Apple ID, которым вы покупали.</p>
+<h2>Может ли моя семья пользоваться Pro?</h2>
+<p>Да. Pro поддерживает «Семейный доступ»: если у вас включён «Семейный доступ» и «Общие покупки», члены семьи получат Pro без повторной оплаты.</p>
+<h2>Какие файлы выписок можно импортировать?</h2>
+<p>PDF, CSV и OFX/QFX, которые вы выбираете сами. Приложение не подключается к вашему банку.</p>
+<h2>Как стереть мои данные?</h2>
+<p>Настройки → Резервная копия → «Удалить все данные». Удаление приложения тоже удаляет его данные.</p>
+<h2>Какие языки поддерживаются?</h2>
+<p>Английский и русский.</p>
+<p><a href="privacy.html">Политика конфиденциальности</a></p>
+</article>
+</main>
+<footer>
+  <span>© 2026 Akcha Flow</span>
+  <nav>
+    <a href="support.html"><span lang="en">Support</span><span lang="ru">Поддержка</span></a>
+    <a href="privacy.html"><span lang="en">Privacy Policy</span><span lang="ru">Политика конфиденциальности</span></a>
+  </nav>
+</footer>
+</div>
+<script>
+(function () {
+  var root = document.documentElement, lang = "en";
+  try { lang = localStorage.getItem("lang") || ""; } catch (e) {}
+  if (lang !== "en" && lang !== "ru") {
+    lang = (navigator.language || "en").toLowerCase().indexOf("ru") === 0 ? "ru" : "en";
+  }
+  function apply(l) {
+    root.setAttribute("data-lang", l);
+    root.setAttribute("lang", l);
+    var b = document.querySelectorAll(".lang-switch button");
+    for (var i = 0; i < b.length; i++) b[i].setAttribute("aria-pressed", String(b[i].dataset.l === l));
+    try { localStorage.setItem("lang", l); } catch (e) {}
+  }
+  apply(lang);
+  var b = document.querySelectorAll(".lang-switch button");
+  for (var i = 0; i < b.length; i++) b[i].addEventListener("click", function () { apply(this.dataset.l); });
+  var shots = document.getElementById("shots");
+  if (shots) {
+    var imgs = shots.querySelectorAll("img"), left = imgs.length;
+    var done = function () { if (--left <= 0 && !shots.querySelector("img")) shots.remove(); };
+    imgs.forEach(function (im) {
+      im.addEventListener("error", function () { im.remove(); done(); });
+      im.addEventListener("load", function () { left = -1; });
+    });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+:root{
+  --bg:#f5f7fb;--fg:#12151c;--muted:#5a6475;--card:#ffffff;--line:#e1e6ef;
+  --accent:#2f6df0;--accent-fg:#ffffff;--green:#14a37a;--warm:#e08a00;
+  --shadow:0 1px 2px rgba(18,21,28,.06),0 8px 24px rgba(18,21,28,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1117;--fg:#e9edf5;--muted:#95a0b4;--card:#161b24;--line:#252c38;
+  --accent:#6a9bff;--accent-fg:#0e1117;--green:#3ccfa2;--warm:#f5b13d;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1117;--fg:#e9edf5;--muted:#95a0b4;--card:#161b24;--line:#252c38;
+  --accent:#6a9bff;--accent-fg:#0e1117;--green:#3ccfa2;--warm:#f5b13d;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+[data-lang="en"] [lang="ru"],[data-lang="ru"] [lang="en"]{display:none!important}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none;font-weight:650;font-size:18px}
+.brand img{width:34px;height:34px;border-radius:8px}
+.menu{display:flex;align-items:center;gap:18px;font-size:15px}
+.menu a{color:var(--muted);text-decoration:none}
+.menu a:hover{color:var(--fg)}
+.lang-switch{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang-switch button{font:inherit;font-size:13px;padding:4px 11px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.lang-switch button[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg)}
+
+/* hero */
+.hero{text-align:center;padding:48px 0 28px}
+.hero .icon{width:112px;height:112px;border-radius:25px;box-shadow:var(--shadow)}
+h1{font-size:clamp(34px,6vw,52px);line-height:1.1;margin:22px 0 10px;letter-spacing:-.02em;text-wrap:balance}
+.lead{font-size:clamp(18px,2.6vw,22px);color:var(--muted);max-width:620px;margin:0 auto 26px;text-wrap:balance}
+.pill{display:inline-block;padding:10px 20px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);font-size:15px}
+
+/* screenshots (hidden by script when no files are present) */
+.shots{display:flex;gap:16px;overflow-x:auto;padding:28px 4px 8px;scroll-snap-type:x proximity}
+.shots img{height:440px;width:auto;border-radius:24px;border:1px solid var(--line);box-shadow:var(--shadow);scroll-snap-align:center;flex:0 0 auto}
+
+/* sections */
+h2{font-size:clamp(24px,4vw,32px);line-height:1.2;margin:56px 0 18px;letter-spacing:-.01em;text-wrap:balance}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:8px;background:var(--accent)}
+.dot.g{background:var(--green)}.dot.w{background:var(--warm)}
+.price{font-size:34px;font-weight:700;margin:4px 0 10px}
+.price small{font-size:15px;font-weight:500;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:12px 0 0}
+ul.tick li{padding-left:26px;position:relative;margin:7px 0;color:var(--muted);font-size:16px}
+ul.tick li::before{content:"";position:absolute;left:3px;top:.55em;width:9px;height:5px;border-left:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(-45deg)}
+.note{color:var(--muted);font-size:14px;margin-top:14px}
+
+/* documents (privacy, support) */
+.doc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px 28px 30px;margin:12px 0 40px;box-shadow:var(--shadow)}
+.doc h1{font-size:clamp(26px,5vw,34px);margin:22px 0 4px;text-align:left}
+.doc h2{font-size:20px;margin:28px 0 6px}
+.doc p,.doc li{font-size:16.5px}
+.doc .muted{color:var(--muted);margin:0 0 8px}
+.doc ul{padding-left:22px}
+
+footer{border-top:1px solid var(--line);margin-top:64px;padding:26px 0 44px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--muted)}
+footer nav{display:flex;gap:18px}
+@media (max-width:520px){.shots img{height:360px}.doc{padding:8px 18px 24px}}
